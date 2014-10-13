@@ -1,0 +1,5 @@
+# Logs
+/log/*log
+
+# App Config
+/config/application.yml
