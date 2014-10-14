@@ -3,3 +3,6 @@
 
 # App Config
 /config/application.yml
+
+# Local development environment variables
+/.env
