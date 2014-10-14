@@ -23,7 +23,12 @@ configure do
   webhook_id = $redis.get("webhook-id")
 
   # Get a fresh webhook set up, just in case old one has died
-  webhook = Trello::Webhook.find(webhook_id) if webhook_id
+  webhook = begin
+    Trello::Webhook.find(webhook_id) if webhook_id
+  rescue Trello::Error
+    nil
+  end
+
   webhook.delete if webhook
 
   # Need this to run after the app is able to serve requests
