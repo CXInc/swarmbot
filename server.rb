@@ -8,7 +8,9 @@ require "newrelic_rpm"
 set :protection, :except => [:json_csrf]
 
 def gif
-  "http://imgur.com/qrLEV.gif"
+  choices = %w(beetack.gif not-the-bees.gif oprah-bees.gif)
+  name = choices[rand(3)]
+  "#{ ENV['ROOT_URL'] }/#{name}"
 end
 
 configure do
