@@ -37,7 +37,7 @@ configure do
     webhook = Trello::Webhook.create(
       description: "Swarmbot",
       id_model: ENV['TRELLO_BOARD_ID'],
-      callback_url: ENV['WEBHOOK_URL']
+      callback_url: ENV['ROOT_URL'] + "/webhook"
     )
 
     $redis.set "webhook-id", webhook.id

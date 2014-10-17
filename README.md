@@ -36,7 +36,7 @@ heroku config:set SLACK_TEAM=YOUR_SLACK_TEAM \
     TRELLO_DEVELOPER_PUBLIC_KEY=YOUR_TRELLO_KEY \
     TRELLO_MEMBER_TOKEN=YOUR_TRELLO_TOKEN \
     TRELLO_BOARD_ID=YOUR_TRELLO_BOARD_OD \
-    WEBHOOK_URL=http://my-swarmbot-app-name-here.herokuapp.com/webhook
+    ROOT_URL=http://my-swarmbot-app-name-here.herokuapp.com
 ```
 
 Local development
